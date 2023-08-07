@@ -1,0 +1,6 @@
+main: dev.sharlot.damage_reporter.App
+author: sharlot
+name: damage_reporter
+version: 1.0
+description: Reports all damage taken to the chat
+api-version: '1.20'
