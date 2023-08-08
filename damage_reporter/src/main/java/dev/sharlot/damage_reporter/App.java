@@ -10,7 +10,6 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityRegainHealthEvent;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
-import org.bukkit.event.player.PlayerGameModeChangeEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import net.md_5.bungee.api.chat.TranslatableComponent;
@@ -53,7 +52,7 @@ public class App extends JavaPlugin implements Listener {
             }
         }
     }
-    @EventHandler
+    @EventHandler(priority = EventPriority.MONITOR)
     public void onHeal(EntityRegainHealthEvent e) {
         if(e.getEntity() instanceof Player) {
             String player = ((Player)e.getEntity()).getPlayerListName();
